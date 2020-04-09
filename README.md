@@ -98,6 +98,8 @@ class AccurateClock < Clock
   end
   memoize :now, :identifier => :accurate_clock
 end
+
+Ruby will not garbage colllect memoized class methods, which can lead to memory bloat if the memoized class methods accepts arguments.
 ```
 
 
